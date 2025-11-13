@@ -1,0 +1,103 @@
+:root {
+  --card-width: 520px;
+  --card-padding: 32px;
+  --bg: #000;
+  --card-bg: #fff;
+  --muted: #666;
+  --brand-green: #1e8a3a;
+  --error: #d92b2b;
+  --input-border: #111;
+  --radius: 6px;
+  --font: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* center container */
+.wrap {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: var(--card-width);
+  background: var(--card-bg);
+  padding: var(--card-padding);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: #222;
+  margin-bottom: 8px;
+  margin-top: 6px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1.5px solid var(--input-border);
+  border-radius: 6px;
+  outline: none;
+  transition: box-shadow 0.12s, border-color 0.12s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 0 3px rgba(30, 138, 58, 0.06);
+  border-color: #333;
+}
+
+.msg {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.msg.error {
+  color: var(--error);
+}
+.msg.success {
+  color: var(--brand-green);
+}
+
+.submit-row {
+  margin-top: 6px;
+}
+
+button {
+  padding: 8px 28px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* responsive */
+@media (max-width: 560px) {
+  .card {
+    width: 92%;
+    padding: 20px;
+  }
+}
